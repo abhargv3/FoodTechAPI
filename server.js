@@ -54,7 +54,7 @@ router.route('/foods')
         food.weight = req.body.weight;
         
         // save the bear and check for errors
-        Food.save(function(err) {
+        food.save(function(err) {
             if (err)
                 res.send(err);
 
