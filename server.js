@@ -16,10 +16,9 @@ app.use(bodyParser.json());
 var port = process.env.PORT || 8080;        // set our port
 
 var mongoose   = require('mongoose');
-mongoose.connect('mongodb://root:foodtech@ds117869.mlab.com:17869/heroku_7g1wzzsv'); // connect to our database
+//mongoose.connect('mongodb://root:foodtech@ds117869.mlab.com:17869/heroku_7g1wzzsv'); // connect to our database
 //mongoose.connect('mongodb://node:node@novus.modulusmongo.net:27017/Iganiq8o'); // connect to our database
-//mongoose.connect('mongodb://root:password@ds159208.mlab.com:59208/foodtech');
-
+mongoose.connect('mongodb://root:foottech@ds035786.mlab.com:35786/heroku_3fcsgz2b');
 var Food = require('./models/food');
 
 // ROUTES FOR OUR API
