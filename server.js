@@ -70,6 +70,15 @@ router.route('/foods')
 
             res.json(foods);
         });
+    })
+    .delete(function(req, res) {
+        Food.remove({
+        }, function(err, food) {
+            if (err)
+                res.send(err);
+
+            res.json({ message: 'Successfully deleted Everything' });
+        });
     });
 
 
