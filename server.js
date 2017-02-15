@@ -43,17 +43,17 @@ router.get('/', function(req, res) {
 
 router.route('/foods')
 
-    // create a bear (accessed at POST http://localhost:8080/api/bears)
+    // create a foods (accessed at POST http://localhost:8080/api/foods)
     .post(function(req, res) {
         
-        var food = new Food();      // create a new instance of the Bear model
-        food.text = req.body.text;  // set the bears name (comes from the request)
+        var food = new Food();      // create a new instance of the Food model
+        food.text = req.body.text;  // set the foods name (comes from the request)
         food.quantity = req.body.quantity;
         food.measure = req.body.measure;
         food.food = req.body.food;
         food.weight = req.body.weight;
         
-        // save the bear and check for errors
+        // save the foods and check for errors
         food.save(function(err) {
             if (err)
                 res.send(err);
@@ -62,7 +62,7 @@ router.route('/foods')
         });
         
     })
-        // get all the bears (accessed at GET http://localhost:8080/api/bears)
+        // get all the foods (accessed at GET http://localhost:8080/api/foods)
     .get(function(req, res) {
         Food.find(function(err, foods) {
             if (err)
